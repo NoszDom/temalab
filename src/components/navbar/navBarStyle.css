@@ -1,0 +1,26 @@
+.navBar {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  font-weight: 700;
+  font-size: 1.4em;
+  border: solid #000;
+  border-width: 0px 0px 1px 0px;
+
+  background-color: #3b74ed;
+}
+
+.navBar > div {
+  color: #ffffff;
+  display: inline-block;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.navText {
+  width: 200px;
+  text-align: center;
+}

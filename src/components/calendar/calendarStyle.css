@@ -1,0 +1,44 @@
+.myItem {
+  font-family: "Roboto Black";
+  width: 14.28%;
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 0.2px solid lightgray;
+  background-color: transparent;
+}
+.calendar {
+  height: 100%;
+}
+
+.cells {
+  height: calc(100% - 38px);
+}
+
+.row {
+  height: 16.66%;
+}
+
+.dot {
+  background-color: transparent;
+  font-size: 1em;
+  text-align: center;
+  color: black;
+  font-weight: 700;
+  height: 25px;
+  width: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.myDay {
+  padding: 10px 0px 5px 0px;
+  font-size: 1.2em;
+  display: inline-block;
+  font-family: "Roboto Black";
+  width: 14.28%;
+  text-align: center;
+  color: #888;
+}
