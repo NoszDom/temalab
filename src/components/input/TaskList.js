@@ -12,7 +12,7 @@ function TaskList(props) {
         if (task.keyProp === props.actualDay.toLocaleString()) {
           index = index + 1;
           return (
-            <li tabindex={index} className="taskLi">
+            <li className="taskLi">
               <Task task = {task} tasks = {props.tasks} setTasks={props.setTasks}/>
             </li>
           );

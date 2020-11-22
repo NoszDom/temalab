@@ -8,7 +8,12 @@ function TaskOnItem(props) {
       {props.tasks.map((task) => {
         if (task.keyProp === props.day.toLocaleString()) {
           index = index + 1;
-          return <div><div className = "bulletPoint"/><div className="bulletPointText">{task.value}</div></div>;
+          return (
+            <div>
+              <div className="bulletPoint" />
+              <div className="bulletPointText">{task.value}</div>
+            </div>
+          );
         } else {
           return null;
         }

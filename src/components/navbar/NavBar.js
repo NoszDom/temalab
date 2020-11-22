@@ -6,7 +6,7 @@ function NavBar(props) {
 
   return (
     <div className="navBar">
-      <div onClick={() => props.prevClick()} className="arrow"S>
+      <div onClick={() => props.prevClick()} className="arrow">
         ◄
       </div>
       <div className="navText">{text}</div>
