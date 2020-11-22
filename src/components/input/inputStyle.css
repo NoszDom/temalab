@@ -1,16 +1,66 @@
-
-.dayLabel{
-    position: fixed;
-    top: 1%;
+.myController {
+  width: 100%;
 }
 
-.myInputBar{
-    position: fixed;
-    top: 5%;
+.dayLabel {
+  padding: 0px 0px 5px 0px;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  display: block;
 }
 
-.myTasks{
-    position: fixed;
-    top: 10%;
+.myInputbar {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
 }
 
+.inputBox,
+.btn-Add {
+  border-color: darkgray;
+  border-width: 1px;
+  font-size: 1.1em;
+}
+
+.inputBox {
+  width: 90%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  box-sizing: border-box;
+}
+
+.inputBox:focus {
+  outline: none;
+}
+
+.btn-Add {
+  box-sizing: border-box;
+  color: white;
+  width: 10%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-left: none;
+  font-weight: 700;
+  background-color: #3b74ed;
+}
+
+.btn-Add:focus {
+  outline: none;
+}
+
+.taskList {
+  margin: 0;
+  padding: 0;
+}
+
+.task {
+  width: max-content;
+  border-color: transparent;
+  border-radius: 5px;
+  background-color: #3b74ed;
+  color: white;
+  margin-top: 0.2em;
+  padding: 2px 4px;
+}
