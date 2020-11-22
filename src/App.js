@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Calendar from "./components/calendar/Calendar";
@@ -33,7 +34,6 @@ function initItems(actualMonth) {
     iteratorDay = iteratorDay.plus({ days: 7 });
     items.push(rows);
   }
-
   return items;
 }
 
