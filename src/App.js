@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Calendar from "./components/calendar/Calendar";
@@ -85,6 +84,7 @@ function App() {
 
         <div className="myCalendar">
           <Calendar
+            tasks={tasks}
             items={actualItems}
             actualDay={actualDay}
             actualMonth={actualMonth}

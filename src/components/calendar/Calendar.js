@@ -22,6 +22,7 @@ function Calendar(props) {
             {row.map((col, j) => (
               <Item
                 day={col}
+                tasks={props.tasks}
                 actualDay={props.actualDay}
                 actualMonth={props.actualMonth}
                 onClick={() => props.onClick(col)}

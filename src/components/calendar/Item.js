@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { DateTime } from "luxon";
 import "./calendarStyle.css";
+import TaskOnItem from "./TaskOnItem";
+import React from "react";
 
 function Item(props) {
   var currentClass = "myItem";
@@ -14,6 +14,7 @@ function Item(props) {
   return (
     <div className={currentClass} onClick={() => props.onClick()}>
       <div className="dot">{props.day.day}</div>
+      <TaskOnItem tasks ={props.tasks} day = {props.day}/>
     </div>
   );
 }

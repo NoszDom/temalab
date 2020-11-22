@@ -23,15 +23,21 @@
   border: solid #000;
   border-width: 0px 1px 0px 0px;
   height: 100%;
-  padding: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .myInput {
   width: 100%;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
 }
 
 .myTasks {
-  height: 100%;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .myCalendar {

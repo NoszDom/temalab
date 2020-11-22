@@ -46,7 +46,7 @@
   background-color: #3b74ed;
 }
 
-.btn-Add:focus, .btn-Delete:focus {
+.btn-Add:focus, .btn-Delete:focus, .taskLi:focus {
   outline: none;
 }
 
@@ -57,7 +57,7 @@
 
 .task{
   width: max-content;
-  max-width: 100%;
+  max-width: calc(100% - 10px);
   border-color: transparent;
   border-radius: 5px;
   background-color: #3b74ed;
@@ -74,4 +74,19 @@
   border: none;
   padding-right: 0;
 
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ddd; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; 
 }
