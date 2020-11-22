@@ -1,5 +1,7 @@
 import React from "react";
 import "./inputStyle.css";
+import Task from "./Task";
+
 
 function TaskList(props) {
   var index = 0;
@@ -10,8 +12,8 @@ function TaskList(props) {
         if (task.keyProp === props.actualDay.toLocaleString()) {
           index = index + 1;
           return (
-            <li tabindex={index} className="task">
-              {task.value}
+            <li tabindex={index} className="taskLi">
+              <Task task = {task} tasks = {props.tasks} setTasks={props.setTasks}/>
             </li>
           );
         } else {

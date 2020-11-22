@@ -26,10 +26,16 @@ function InputComponent(props) {
           type="submit"
           onClick={(e) => {
             e.preventDefault();
-            props.setTasks([
-              ...props.tasks,
-              { keyProp: props.selectedDay.toLocaleString(), value: taskText },
-            ]);
+            if (taskText !== "") {
+              props.setTasks([
+                ...props.tasks,
+                {
+                  keyProp: props.selectedDay.toLocaleString(),
+                  value: taskText,
+                },
+              ]);
+              setTaskText("");
+            }
           }}
         >
           +

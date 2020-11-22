@@ -23,6 +23,7 @@ function Calendar(props) {
               <Item
                 day={col}
                 actualDay={props.actualDay}
+                actualMonth={props.actualMonth}
                 onClick={() => props.onClick(col)}
               />
             ))}

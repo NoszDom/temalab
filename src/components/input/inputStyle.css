@@ -46,7 +46,7 @@
   background-color: #3b74ed;
 }
 
-.btn-Add:focus {
+.btn-Add:focus, .btn-Delete:focus {
   outline: none;
 }
 
@@ -55,12 +55,23 @@
   padding: 0;
 }
 
-.task {
+.task{
   width: max-content;
+  max-width: 100%;
   border-color: transparent;
   border-radius: 5px;
   background-color: #3b74ed;
   color: white;
   margin-top: 0.2em;
   padding: 2px 4px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-Delete{
+  color: #ddd;
+  background-color: transparent;
+  border: none;
+  padding-right: 0;
+
 }

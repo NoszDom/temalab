@@ -79,7 +79,7 @@ function App() {
           </div>
 
           <div id="taskList" className="myTasks">
-            <TaskList tasks={tasks} actualDay={actualDay} />
+            <TaskList tasks={tasks} setTasks={setTasks} actualDay={actualDay} />
           </div>
         </div>
 
@@ -87,6 +87,7 @@ function App() {
           <Calendar
             items={actualItems}
             actualDay={actualDay}
+            actualMonth={actualMonth}
             onClick={(i) => setActualDay(i)}
           />
         </div>
