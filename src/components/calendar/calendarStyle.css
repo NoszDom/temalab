@@ -54,12 +54,10 @@
 }
 
 .tasksOnItem{
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  max-height: calc(100% - 31px);
+  position: absolute;
+  width: calc(14.28% - 36.7px);
+  max-height: calc(16.66% - 48px);
   overflow: hidden;
-  
 }
 
 .bulletPoint{
