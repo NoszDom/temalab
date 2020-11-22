@@ -74,4 +74,5 @@
   box-sizing: border-box;
   width: calc(100% - 9px);
   display: inline-block;
+  white-space: nowrap;
 }
