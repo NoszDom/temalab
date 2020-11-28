@@ -5,6 +5,7 @@ import InputComponent from "./components/input/InputComponent";
 import NavBar from "./components/navbar/NavBar";
 import { DateTime } from "luxon";
 import TaskList from "./components/input/TaskList";
+import axios from "axios";
 
 function initItems(actualMonth) {
   const items = [];
@@ -36,6 +37,25 @@ function initItems(actualMonth) {
   return items;
 }
 
+async function loadTasks(taskList, setTaskList) {
+  const response = await axios.get("https://localhost:5001/api/schedule");
+  console.log(response.status, response.data);
+  var result = [];
+   response.data.map((task) => {
+    result.push(
+      {
+        keyProp: DateTime.local(
+          task.year,
+          task.month,
+          task.day
+        ).toLocaleString(),
+        value: task.text,
+      })
+    ;
+  });
+  setTaskList(result);
+}
+
 function App() {
   const [actualDay, setActualDay] = useState(
     DateTime.local(
@@ -48,7 +68,12 @@ function App() {
     DateTime.local(DateTime.local().year, DateTime.local().month)
   );
   var actualItems = initItems(actualMonth);
+
   const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    loadTasks(tasks, setTasks);
+  }, []);
 
   useEffect(() => {
     actualItems = initItems(actualMonth);

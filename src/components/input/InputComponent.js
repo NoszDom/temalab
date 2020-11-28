@@ -1,8 +1,20 @@
 import React, { useState } from "react";
 import "./inputStyle.css";
+import axios from "axios";
 
 function InputComponent(props) {
   const [taskText, setTaskText] = useState("");
+
+  async function createTask(day, text) {
+    await axios
+      .post("https://localhost:5001/api/schedule", {
+        year: day.year,
+        month: day.month,
+        day: day.day,
+        text: text,
+      })
+      .then((res) => console.log(res.status));
+  }
 
   return (
     <div className="myController">
@@ -34,6 +46,7 @@ function InputComponent(props) {
                   value: taskText,
                 },
               ]);
+              createTask(props.selectedDay, taskText);
               setTaskText("");
             }
           }}
