@@ -21,6 +21,7 @@ function Calendar(props) {
           <div className="row" key={i}>
             {row.map((col, j) => (
               <Item
+                key={j}
                 day={col}
                 tasks={props.tasks}
                 actualDay={props.actualDay}

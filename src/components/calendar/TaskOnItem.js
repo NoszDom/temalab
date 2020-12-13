@@ -9,7 +9,7 @@ function TaskOnItem(props) {
         if (task.keyProp === props.day.toLocaleString()) {
           index = index + 1;
           return (
-            <div>
+            <div key={index}>
               <div className="bulletPoint" />
               <div className="bulletPointText">{task.value}</div>
             </div>

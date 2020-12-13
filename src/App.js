@@ -41,17 +41,12 @@ async function loadTasks(taskList, setTaskList) {
   const response = await axios.get("https://localhost:5001/api/schedule");
   console.log(response.status, response.data);
   var result = [];
-   response.data.map((task) => {
-    result.push(
-      {
-        keyProp: DateTime.local(
-          task.year,
-          task.month,
-          task.day
-        ).toLocaleString(),
-        value: task.text,
-      })
-    ;
+  response.data.map((task) => {
+    result.push({
+      keyProp: task.month + "/" + task.day + "/" + task.year,
+      value: task.text,
+    });
+    return null;
   });
   setTaskList(result);
 }
